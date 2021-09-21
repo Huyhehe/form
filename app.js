@@ -48,3 +48,10 @@ document.getElementById("popUp").onsubmit = (e) => {
   e.preventDefault();
   document.getElementById("popUp").style.display = "none";
 };
+function del(a) {
+  document.getElementById("user-list").innerHTML = "";
+  document.getElementById("del-btn").style.display = "";
+  if (a == 1) {
+    arr.length = 0;
+  }
+}
