@@ -7,45 +7,54 @@ body {
   height: 100vh;
   color: aliceblue;
 }
+.hero {
+  width: 100%;
+  height: 100vh;
+  filter: blur(0);
+}
 
 #popUp {
   color: black;
-  position: absolute;
+  position: fixed;
   display: none;
-  background-color: rgb(221, 179, 124);
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20em;
-  height: 7em;
-  border-radius: 6px;
-  font-weight: 700;
-  z-index: 10;
-
-  .popUp-container {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1em;
-    text-align: center;
-    padding-top: 10px;
-    p {
-      margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  .popUp-holder {
+    background-color: rgb(221, 179, 124);
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20em;
+    height: 7em;
+    border-radius: 6px;
+    font-weight: 700;
+    .popUp-container {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+      text-align: center;
+      padding-top: 10px;
+      p {
+        margin: 0;
+      }
     }
-  }
-  .retry-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .retry-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    #retry-btn {
-      width: 4em;
-      height: 2em;
-      font-size: 18px;
-      background-image: linear-gradient(30deg, rgb(255, 217, 0), red);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      #retry-btn {
+        width: 4em;
+        height: 2em;
+        font-size: 18px;
+        background-image: linear-gradient(30deg, rgb(255, 217, 0), red);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -56,7 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: 50px;
   .input-container {
     width: auto;
     height: 100%;
@@ -95,7 +104,7 @@ body {
 }
 
 #userList-container {
-  position: relative;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   height: auto;

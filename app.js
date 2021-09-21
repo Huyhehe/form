@@ -37,6 +37,7 @@ function add(e) {
     };
     arr.push(user);
   } else {
+    document.getElementById("Hero").style.filter = "blur(5px)";
     document.getElementById("popUp").style.display = "block";
   }
   for (let i = 0; i < arr.length; i++) {
@@ -47,6 +48,7 @@ function add(e) {
 document.getElementById("popUp").onsubmit = (e) => {
   e.preventDefault();
   document.getElementById("popUp").style.display = "none";
+  document.getElementById("Hero").style.filter = "";
 };
 function del(a) {
   document.getElementById("user-list").innerHTML = "";
