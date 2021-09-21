@@ -9,6 +9,36 @@
     <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
   </head>
   <body>
+    <form id="popUp">
+      <div class="popUp-container">
+        <p>Something wrong please try again.</p>
+        <p>(Invalid input or User exists already)</p>
+      </div>
+      <div class="retry-container">
+        <button id="retry-btn">OK</button>
+      </div>
+    </form>
+    <br />
+    <form class="add-form" onsubmit="return add(event)">
+      <div class="input-container">
+        <div class="name-container">
+          <label>Enter your information</label><br />
+          <input type="text" id="name" placeholder="Your name" />
+        </div>
+        <div class="age-container">
+          <input type="text" id="age" placeholder="Your age" />
+        </div>
+        <div class="submit-btn-container">
+          <button type="submit" class="submit-btn">SUBMIT</button>
+        </div>
+      </div>
+    </form>
+    <form id="userList-container">
+      <div class="del-btn-container">
+        <button type="submit" id="del-btn">DELETE</button>
+      </div>
+      <ul id="user-list"></ul>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>
