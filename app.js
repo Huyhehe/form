@@ -8,6 +8,16 @@ function checkValid(userName, userAge) {
   if (userAge.length == 0) {
     return false;
   }
+  for (let i = 0; i < userName.length; i++) {
+    if (
+      (userName.charCodeAt(i) < 91 && userName.charCodeAt(i) > 64) ||
+      (userName.charCodeAt(i) < 123 && userName.charCodeAt(i) > 96)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   return true;
 }
 function checkExist(userName, userAge) {
