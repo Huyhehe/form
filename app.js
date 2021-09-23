@@ -37,7 +37,7 @@ function add(e) {
   if (checkValid(userName, userAge) && checkExist(userName, userAge)) {
     document.getElementById(
       "user-list"
-    ).innerHTML += `<li><pre>${userName}         ${userAge}</pre></li>`;
+    ).innerHTML += `<li><p>${userName}</p><p>${userAge}</p></li>`;
     document.getElementById("del-btn").style.display = "block";
     document.getElementById("name").value = "";
     document.getElementById("age").value = "";
@@ -50,9 +50,9 @@ function add(e) {
     document.getElementById("Hero").style.filter = "blur(5px)";
     document.getElementById("popUp").style.display = "block";
   }
-  for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-  }
+  // for (let i = 0; i < arr.length; i++) {
+  //   console.log(arr[i]);
+  // }
 }
 
 document.getElementById("popUp").onsubmit = (e) => {
