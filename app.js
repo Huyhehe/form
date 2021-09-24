@@ -59,6 +59,8 @@ document.getElementById("popUp").onsubmit = (e) => {
   e.preventDefault();
   document.getElementById("popUp").style.display = "none";
   document.getElementById("Hero").style.filter = "";
+  document.getElementById("name").value = "";
+  document.getElementById("age").value = "";
 };
 function del(a) {
   document.getElementById("user-list").innerHTML = "";
